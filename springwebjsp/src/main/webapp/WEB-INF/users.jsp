@@ -33,6 +33,7 @@ border: solid 1px;
 			</c:forEach>
 
 		</table>
+		<div><a href="adduser">ADD USER</a></div>
 	</center>
 </body>
 </html>
