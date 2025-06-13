@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style>
+#loginwrapper{
+width: 50%;
+margin: 30px auto;
+text-align: center;
+padding: 30 0 30 0;
+}
+
+#loginform{
+padding :0 50px;
+}
+
+#error{
+color: red;
+font-style: italic;
+}
+
+#logout{
+color: green;
+font-style: italic;
+}
+</style>
+</head>
+<body>
+<div id="loginwrapper">
+<h1>Custom Login Form</h1>
+<div th:if="${param.error}" id="error"> CHECK CREDENTIALS </div>
+<div th:if="${param.logout}" id="logout"> LOGGED SUCCEFULLY </div>
+<form method="post" action="/login" id="loginform">
+<p>
+USERNAME: <input type="text" name="username"></p>
+<p>
+PASSWORD: <input type="password" name="password"></p>
+<input type="submit" value="LOGIN">
+</form>
+
+</div>
+</body>
+</html>

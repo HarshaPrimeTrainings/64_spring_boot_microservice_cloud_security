@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+<center>
+<h1 style="color: teal">Hello <span th:remove="tag" sec:authentication="name"></span>, SpringSecurityWeb Greeting You GoodMorning</h1>
+<form action="/logout" method="post">
+<input type="submit" value="LOGOUT">
+</form>
+</center>
+</body>
+</html>
