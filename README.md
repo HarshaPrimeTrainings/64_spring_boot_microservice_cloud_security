@@ -86,6 +86,6 @@ Check the credentials. If still the error persists then follow below steps:
 ![KEYCLOAK troublShoot ](https://github.com/HarshaPrimeTrainings/spring_boot_microservices_55/blob/main/keycloaktroubleshoot.jpg)
 
 # Token Generation With KEYCLOAK
-![KEYCLOAK Token Generation ](https://github.com/HarshaPrimeTrainings/spring_boot_microservices_55/blob/main/keycloaktoken.PNG)
+![KEYCLOAK Token Generation ](https://github.com/HarshaPrimeTrainings/64_spring_boot_microservice_cloud_security/blob/main/keycloaktoken.JPG)
 # Testing API with KEYCLOAK Token
 ![KEYCLOAK Token Testing ](https://github.com/HarshaPrimeTrainings/64_spring_boot_microservice_cloud_security/blob/main/product.JPG)
