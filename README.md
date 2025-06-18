@@ -89,3 +89,43 @@ Check the credentials. If still the error persists then follow below steps:
 ![KEYCLOAK Token Generation ](https://github.com/HarshaPrimeTrainings/64_spring_boot_microservice_cloud_security/blob/main/keycloaktoken.JPG)
 # Testing API with KEYCLOAK Token
 ![KEYCLOAK Token Testing ](https://github.com/HarshaPrimeTrainings/64_spring_boot_microservice_cloud_security/blob/main/product.JPG)
+
+# DOCKER
+- Example Dockerfile
+```
+FROM openjdk:17-jdk-alpine
+ADD target/app1.jar app1.jar
+ENTRYPOINT [ "java","-jar","app1.jar" ]
+EXPOSE 8080
+```
+- Image Build
+`docker build -f Dockerfile -t mydemoimage .` ("." is current location)
+- Running Image
+`docker run -p 7070:7070 mydemoimage`
+
+# Running Docker application by using docker-compose
+- Example docker-compose.yml
+```
+version: "3"
+services:
+  springapp1:
+    image: app1image
+    build:
+      context: ./
+      dockerfile: Dockerfile
+    ports:
+      - 8080:8080
+  springapp2:
+    image: app2image
+    build:
+      context: ./../springdockerdemoapp/
+      dockerfile: Dockerfile
+    ports:
+      - 7070:7070
+```
+- Running Docker applications by using docker-compose
+	- Simply run `docker-compose up` (By default docker-compose look docker-compose.yml in current directory).
+	- shutting down `docker-compose down`
+- If docker-compose.yml in other location use below command.
+	- `docker-compose.yml -f <location of docker-compose.yml> up`
+	- shutting down `docker-compose -f <location of docker-compose.yml> down`
